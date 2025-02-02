@@ -1,0 +1,47 @@
+.preloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  gap: 20px;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 3px;
+  background-color: #2a2a2a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #64ffda;
+  transition: width 0.15s ease-out;
+}
+
+.progress-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.evolution-emoji {
+  font-size: 32px;
+  animation: bounce 1s ease infinite;
+}
+
+.stage-text {
+  font-family: monospace;
+  color: #64ffda;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
