@@ -31,12 +31,12 @@ const Portfolio = () => {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white transition-all duration-300 relative overflow-hidden ${
       isTerminalOpen && !isMobile ? 'lg:pr-[520px]' : ''
-    }`}>
+    } ${isMobile ? 'pb-20' : ''}`}>
       {/* Background Effects */}
       <BackgroundEffects />
       
       {/* Vertical Navigation */}
-      <VerticalNavbar />
+      <VerticalNavbar isMobile={isMobile} />
       
       <Helmet>
         <title>{portfolioContent?.hero?.name || 'Portfolio'}</title>

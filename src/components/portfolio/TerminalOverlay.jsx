@@ -16,7 +16,7 @@ const TerminalOverlay = ({ isOpen, onToggle, isMobile }) => {
             ? isMobile
               ? 'inset-8 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border-2 border-slate-700/50 hover:border-emerald-400/50'
               : 'top-8 bottom-8 right-8 w-[480px] rounded-xl border-2 border-slate-700/50 hover:border-emerald-400/50 bg-slate-900/95 backdrop-blur-md shadow-2xl'
-            : 'bottom-4 right-4 sm:bottom-8 sm:right-8 w-auto h-auto'
+            : 'bottom-20 right-4 sm:bottom-8 sm:right-8 w-auto h-auto'
         }`}
       >
         {isOpen ? (
