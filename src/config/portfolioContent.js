@@ -3,26 +3,22 @@ const portfolioContent = {
     name: "Athul Sabu",
     title: "Passionate Developer and Coder",
     description: "Hey, I’m Athul! I enjoy creating web applications that solve real problems and bring ideas to life. I’m all about clean, efficient code and crafting user experiences that feel effortless. Every project is a chance to learn, grow, and make something meaningful. I believe the best solutions are born from curiosity and collaboration.",
-    profileImage: "/portfolio-react/images/profile-pic.png"
+    profileImage: "/react-portfolio/images/profile-pic.png"
   },
   
   skills: [
-    // Programming Languages
     'C',
     'Java',
     'Python',
     'JavaScript',
-    // Frontend Technologies
     'HTML',
     'CSS',
     'React',
-    // Backend Technologies
+    'Next.js',
     'Node.js',
     'Express',
-    // Databases
     'MongoDB',
     'SQL',
-    // Version Control
     'Git'
   ],
   
@@ -34,7 +30,16 @@ const portfolioContent = {
         desc: 'Responsive web application for booking newspaper ad slots',
         description: 'Created a responsive web application for booking newspaper ad slots using HTML, CSS, JavaScript, and Node.js. The web application allows users to select dates and ad spaces with real-time availability updates and integrates Stripe for secure payments. The design ensures a seamless experience across all devices.',
         deployLink: 'https://adcolumn.onrender.com',
-        previewImage: '/portfolio-react/images/projects/adcolumn-preview.png'
+        sourceCodeLink: '',
+        previewImage: '/react-portfolio/images/projects/adcolumn-preview.png',
+        images: [
+          '/react-portfolio/images/projects/adcolumn-preview.png',
+          '/react-portfolio/images/projects/adcolumn-2.png',
+          '/react-portfolio/images/projects/adcolumn-3.png',
+          '/react-portfolio/images/projects/adcolumn-4.png',
+          '/react-portfolio/images/projects/adcolumn-5.png',
+          '/react-portfolio/images/projects/adcolumn-6.png',
+        ]
     },
     {
         name: 'CV-parser',
@@ -43,25 +48,62 @@ const portfolioContent = {
         desc: 'Web application for parsing and extracting key details from resume PDFs',
         description: 'Developed a Node.js web application to parse and extract key details from resume PDFs. Utilized Express.js, EJS, pdf-parse, compromise, and express-fileupload. The web application extracts and displays personal details such as name, email, qualifications, and more, showcasing skills in server-side JavaScript, file handling, and text processing.',
         deployLink: 'https://automated-cv-parser.onrender.com/',
-        previewImage: '/portfolio-react/images/projects/cvparser-preview.png'
+        sourceCodeLink: '',
+        previewImage: '/react-portfolio/images/projects/cvparser-preview.png',
+        images: [
+          '/react-portfolio/images/projects/cvparser-preview.png',
+          '/react-portfolio/images/projects/cvparser-2.png',
+        ]
     },
     {
-        name: 'FoodDelivery',
-        title: 'FoodDelivery',
-        tech: 'React, Node.js, Express, MongoDB',
-        desc: 'Full-stack food delivery web application',
-        description: 'Built a full-stack food delivery web application using React, Node.js, Express, and MongoDB. The web application features a user-friendly interface for browsing menus and placing orders, an admin panel for restaurant management, secure payment processing via Stripe, and real-time order tracking.',
-        deployLink: 'https://food-del-web-app.netlify.app/',
-        previewImage: '/portfolio-react/images/projects/food-del.png'
+        name: 'FutureScape',
+        title: 'FutureScape',
+        tech: 'Next.js, python, docker, supabase',
+        desc: 'Web Application for online competitions',
+        description: 'Built a web application for a college tech fest with seven rounds, including blind coding and debugging challenges. Used Next.js, Tailwind CSS, and Supabase to implement features like a real-time leaderboard, user authentication, and an admin panel to manage participant progression.',
+        deployLink: '',
+        sourceCodeLink: '',
+        previewImage: '/react-portfolio/images/projects/futurescape-1.png',
+        images: [
+          '/react-portfolio/images/projects/futurescape-1.png',
+          '/react-portfolio/images/projects/futurescape-2.png',
+          '/react-portfolio/images/projects/futurescape-3.png',
+          '/react-portfolio/images/projects/futurescape-4.png',
+          '/react-portfolio/images/projects/futurescape-5.png',
+          '/react-portfolio/images/projects/futurescape-6.png',
+        ]
     },
     {
-        name: 'Gemini-clone',
-        title: 'Gemini-clone',
-        tech: 'React, Gemini API, CSS',
-        desc: 'AI chat interface clone inspired by Google Gemini',
-        description: 'Built a responsive Gemini clone using React and integrated with the official Gemini API. Features include a clean chat interface with message history, code block formatting, and responsive design. The application demonstrates proficiency in React state management, API integration, and CSS styling.',
-        deployLink: 'https://gemini-clone-athul-sabus-projects.vercel.app/',
-        previewImage: '/portfolio-react/images/projects/gemini-preview.png'
+        name: 'PolyComm',
+        title: 'PolyComm',
+        tech: 'Next.js, Stream API, React',
+        desc: 'Multilingual video conferencing platform with transcription',
+        description: 'Developed a video conferencing platform using Next.js and the Stream API, enabling users to create and join meetings. The application supports real-time transcription in three languages, with automatic translation to English for seamless communication. Additionally, PolyComm offers post-meeting documentation tools with customizable templates, allowing users to generate, edit, and export detailed meeting summaries efficiently.',
+        deployLink: '',
+        previewImage: '/react-portfolio/images/projects/polycomm-1.png',
+        images: [
+          '/react-portfolio/images/projects/polycomm-1.png',
+          '/react-portfolio/images/projects/polycomm-2.png',
+          '/react-portfolio/images/projects/polycomm-3.png',
+          '/react-portfolio/images/projects/polycomm-4.png',
+          '/react-portfolio/images/projects/polycomm-5.png',
+          '/react-portfolio/images/projects/polycomm-6.png',
+        ]
+    },
+    {
+        name: 'File-Vault',
+        title: 'File Vault',
+        tech: 'Node.js, Express.js, TypeScript, Supabase, AES-256-GCM',
+        desc: 'Secure file storage and retrieval system with end-to-end encryption',
+        description: 'A secure file storage and retrieval system that allows authorized users to upload, download, and manage their files. Implemented with Node.js, Express.js, TypeScript, and Supabase, using Object-Oriented Programming principles and AES-256-GCM encryption. Features include secure file upload and storage, end-to-end file encryption and decryption, user authentication and authorization, file metadata management, and file renaming and deletion capabilities.',
+        deployLink: '',
+        sourceCodeLink: 'https://github.com/AthulSabu2002/fileVault',
+        previewImage: '/react-portfolio/images/projects/filevault-1.png',
+        images: [
+          '/react-portfolio/images/projects/filevault-1.png',
+          '/react-portfolio/images/projects/filevault-2.png',
+          '/react-portfolio/images/projects/filevault-3.png',
+        ]
     }
   ],
 

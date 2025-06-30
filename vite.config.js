@@ -4,10 +4,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/react-portfolio/",
+  publicDir: "public",
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(path.dirname(new URL(import.meta.url).pathname), "./src"),
+      "@": path.resolve(__dirname, "src")
     },
   },
 })

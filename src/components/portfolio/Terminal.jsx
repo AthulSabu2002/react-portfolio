@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { Terminal, ArrowRight, Code, User, Mail, Briefcase } from 'lucide-react';
-import { portfolioContent } from '../config/portfolioContent';
-import styles from '../styles/Terminal.module.css';
+import { portfolioContent } from '../../config/portfolioContent';
+import styles from '../../styles/Terminal.module.css';
 
 const TerminalPortfolio = () => {
   const [input, setInput] = useState('');

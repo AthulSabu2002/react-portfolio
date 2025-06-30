@@ -31,7 +31,6 @@ const Preloader = ({ progress }) => {
       </div>
       <div className="progress-text">
         <span className="evolution-emoji">{getStage(progress)}</span>
-        {/* <span className="stage-text">Evolution Progress</span> */}
       </div>
     </div>
   );

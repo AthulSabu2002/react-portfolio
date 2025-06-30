@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
-import MainPortfolio from './pages/MainPortfolio';
+import { useState, useEffect } from 'react';
+import Portfolio from './pages/Portfolio';
 import Preloader from './components/Preloader/Preloader';
 
 function App() {
@@ -24,7 +23,7 @@ function App() {
 
   return (
     <div className="app">
-      {loading ? <Preloader progress={progress} /> : <MainPortfolio />}
+      {loading ? <Preloader progress={progress} /> : <Portfolio />}
     </div>
   );
 }
