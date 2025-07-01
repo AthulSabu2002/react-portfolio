@@ -1,5 +1,5 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaDatabase, FaGitAlt, FaPython, FaJava } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiC } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaDatabase, FaGitAlt, FaPython, FaJava, FaGithub } from 'react-icons/fa';
+import { SiMongodb, SiExpress, SiC, SiNextdotjs, SiPostman } from 'react-icons/si';
 import PropTypes from 'prop-types';
 
 const SkillsSection = ({id}) => {
@@ -13,14 +13,18 @@ const SkillsSection = ({id}) => {
     { name: 'HTML', icon: <FaHtml5 /> },
     { name: 'CSS', icon: <FaCss3Alt /> },
     { name: 'React', icon: <FaReact /> },
+    { name: 'Next.js', icon: <SiNextdotjs /> },
     // Backend Technologies
     { name: 'Node.js', icon: <FaNode /> },
     { name: 'Express', icon: <SiExpress /> },
     // Databases
     { name: 'MongoDB', icon: <SiMongodb /> },
     { name: 'SQL', icon: <FaDatabase /> },
+    // Tools
+    { name: 'Postman', icon: <SiPostman /> },
     // Version Control
     { name: 'Git', icon: <FaGitAlt /> },
+    { name: 'GitHub', icon: <FaGithub /> },
   ];
 
   return (

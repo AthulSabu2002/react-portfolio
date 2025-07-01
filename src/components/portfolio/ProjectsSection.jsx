@@ -19,34 +19,57 @@ const ProjectsSection = ({ projects, githubLink, id }) => {
               name={project.name} 
             />
             <h3 className="text-xl text-emerald-400 mb-2 group-hover:text-emerald-300 transition-colors">{project.title}</h3>
-            <p className="text-slate-400 group-hover:text-slate-300 transition-colors mb-4">{project.desc}</p>
+            <div className="text-slate-400 group-hover:text-slate-300 transition-colors mb-4">
+              <p>{project.description || project.desc}</p>
+              {project.tech && (
+                <div className="mt-3">
+                  <span className="font-medium text-emerald-400">Technologies: </span>
+                  <span>{project.tech}</span>
+                </div>
+              )}
+            </div>
             <div className="flex flex-wrap gap-4">
               {
-                project.deployLink && 
-                <a 
-                  href={project.deployLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
-                >
-                  <span>View Live Demo</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
+                project.deployLink ? (
+                  <a 
+                    href={project.deployLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    <span>View Live Demo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2 text-sm text-slate-500 cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                    <span>Deployment Not Available</span>
+                  </span>
+                )
               }
               {
-                project.sourceCodeLink && 
-                <a 
-                  href={project.sourceCodeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
-                >
-                  <FaGithub className="w-4 h-4" />
-                  <span>View Source Code</span>
-                </a>
+                project.sourceCodeLink ? (
+                  <a 
+                    href={project.sourceCodeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    <FaGithub className="w-4 h-4" />
+                    <span>View Source Code</span>
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2 text-sm text-slate-500 cursor-not-allowed">
+                    <FaGithub className="w-4 h-4" />
+                    <span>Source Code Not Available</span>
+                  </span>
+                )
               }
             </div>
           </div>
@@ -66,6 +89,7 @@ const ProjectsSection = ({ projects, githubLink, id }) => {
     </section>
   );
 };
+
 ProjectsSection.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
@@ -74,6 +98,8 @@ ProjectsSection.propTypes = {
       name: PropTypes.string,
       title: PropTypes.string,
       desc: PropTypes.string,
+      description: PropTypes.string,
+      tech: PropTypes.string,
       deployLink: PropTypes.string,
       sourceCodeLink: PropTypes.string,
     })
@@ -82,4 +108,4 @@ ProjectsSection.propTypes = {
   id: PropTypes.string
 };
 
-export default ProjectsSection;
+export default ProjectsSection

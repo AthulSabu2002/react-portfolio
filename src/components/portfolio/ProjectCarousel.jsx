@@ -1,11 +1,33 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
+const DefaultProjectImage = () => (
+  <div className="w-full h-full flex items-center justify-center bg-slate-800">
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="80" 
+      height="80" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="1" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+      className="text-emerald-400"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+      <polyline points="21 15 16 10 5 21"></polyline>
+    </svg>
+  </div>
+);
+
 const ProjectCarousel = ({ images, name }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageErrors, setImageErrors] = useState({});
   
   // Default image if no images provided
-  const defaultImages = ['https://via.placeholder.com/640x360?text=Project+Preview'];
+  const defaultImages = ['default-project-image'];
   const projectImages = images?.length ? images : defaultImages;
   
   const nextSlide = () => {
@@ -16,8 +38,12 @@ const ProjectCarousel = ({ images, name }) => {
     setCurrentSlide((prev) => (prev === 0 ? projectImages.length - 1 : prev - 1));
   };
   
+  const handleImageError = (idx) => {
+    setImageErrors(prev => ({ ...prev, [idx]: true }));
+  };
+  
   return (
-    <div className="relative mb-4 overflow-hidden rounded-lg border border-slate-700/50 h-48">
+    <div className="relative mb-4 overflow-hidden rounded-lg border border-slate-700/50 h-64">
       {/* Image slider */}
       <div className="relative h-full">
         {projectImages.map((image, idx) => (
@@ -27,14 +53,16 @@ const ProjectCarousel = ({ images, name }) => {
               idx === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img
-              src={image}
-              alt={`${name} preview ${idx + 1}`}
-              className="w-full h-full object-cover object-top"
-              onError={(e) => {
-                e.target.src = 'https://via.placeholder.com/640x360?text=Project+Preview';
-              }}
-            />
+            {image === 'default-project-image' || imageErrors[idx] ? (
+              <DefaultProjectImage />
+            ) : (
+              <img
+                src={image}
+                alt={`${name} preview ${idx + 1}`}
+                className="w-full h-full object-cover object-top"
+                onError={() => handleImageError(idx)}
+              />
+            )}
           </div>
         ))}
       </div>

@@ -44,7 +44,7 @@ const Portfolio = () => {
       </Helmet>
 
       {/* Main Content - Centered */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 relative">
         <div className="space-y-12 sm:space-y-16">
           <HeroSection hero={portfolioContent.hero} id="hero" />
           <SkillsSection id="skills" />

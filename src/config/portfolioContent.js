@@ -2,8 +2,8 @@ const portfolioContent = {
   hero: {
     name: "Athul Sabu",
     title: "Passionate Developer and Coder",
-    description: "Hey, I’m Athul! I enjoy creating web applications that solve real problems and bring ideas to life. I’m all about clean, efficient code and crafting user experiences that feel effortless. Every project is a chance to learn, grow, and make something meaningful. I believe the best solutions are born from curiosity and collaboration.",
-    profileImage: "/react-portfolio/images/profile-pic.png"
+    description: "Hey, I'm Athul! I enjoy creating web applications that solve real problems and bring ideas to life. I'm all about clean, efficient code and crafting user experiences that feel effortless. Every project is a chance to learn, grow, and make something meaningful. I believe the best solutions are born from curiosity and collaboration.",
+    profileImage: "/images/profile-pic.png"
   },
   
   skills: [
@@ -19,7 +19,9 @@ const portfolioContent = {
     'Express',
     'MongoDB',
     'SQL',
-    'Git'
+    'Git',
+    'GitHub',
+    'Postman'
   ],
   
   projects: [
@@ -28,17 +30,17 @@ const portfolioContent = {
         title: 'ADcolumn',
         tech: 'HTML, CSS, JavaScript, Node.js',
         desc: 'Responsive web application for booking newspaper ad slots',
-        description: 'Created a responsive web application for booking newspaper ad slots using HTML, CSS, JavaScript, and Node.js. The web application allows users to select dates and ad spaces with real-time availability updates and integrates Stripe for secure payments. The design ensures a seamless experience across all devices.',
+        description: 'A responsive web application that streamlines the process of booking newspaper advertisement slots. The platform features an intuitive interface for users to select dates and ad spaces with real-time availability updates. Stripe integration ensures secure payment processing, while the responsive design provides a seamless experience across all devices. The application solves the challenge of traditional newspaper ad booking by digitizing the entire process.',
         deployLink: 'https://adcolumn.onrender.com',
-        sourceCodeLink: '',
-        previewImage: '/react-portfolio/images/projects/adcolumn-preview.png',
+        sourceCodeLink: 'https://github.com/AthulSabu2002/mini-project',
+        previewImage: '/images/projects/adcolumn-preview.png',
         images: [
-          '/react-portfolio/images/projects/adcolumn-preview.png',
-          '/react-portfolio/images/projects/adcolumn-2.png',
-          '/react-portfolio/images/projects/adcolumn-3.png',
-          '/react-portfolio/images/projects/adcolumn-4.png',
-          '/react-portfolio/images/projects/adcolumn-5.png',
-          '/react-portfolio/images/projects/adcolumn-6.png',
+          '/images/projects/adcolumn-preview.png',
+          '/images/projects/adcolumn-2.png',
+          '/images/projects/adcolumn-3.png',
+          '/images/projects/adcolumn-4.png',
+          '/images/projects/adcolumn-5.png',
+          '/images/projects/adcolumn-6.png',
         ]
     },
     {
@@ -46,13 +48,13 @@ const portfolioContent = {
         title: 'CV-parser',
         tech: 'Node.js, Express.js, EJS, pdf-parse',
         desc: 'Web application for parsing and extracting key details from resume PDFs',
-        description: 'Developed a Node.js web application to parse and extract key details from resume PDFs. Utilized Express.js, EJS, pdf-parse, compromise, and express-fileupload. The web application extracts and displays personal details such as name, email, qualifications, and more, showcasing skills in server-side JavaScript, file handling, and text processing.',
+        description: 'An intelligent web application that automates the extraction of key information from resume PDFs. The system utilizes advanced text processing libraries including pdf-parse and compromise to accurately identify and extract personal details such as names, email addresses, qualifications, and work experience. The application demonstrates proficiency in server-side JavaScript, file handling, and natural language processing, making resume screening more efficient for recruiters and HR professionals.',
         deployLink: 'https://automated-cv-parser.onrender.com/',
-        sourceCodeLink: '',
-        previewImage: '/react-portfolio/images/projects/cvparser-preview.png',
+        sourceCodeLink: 'https://github.com/AthulSabu2002/cv_parser',
+        previewImage: '/images/projects/cvparser-preview.png',
         images: [
-          '/react-portfolio/images/projects/cvparser-preview.png',
-          '/react-portfolio/images/projects/cvparser-2.png',
+          '/images/projects/cvparser-preview.png',
+          '/images/projects/cvparser-2.png',
         ]
     },
     {
@@ -60,17 +62,17 @@ const portfolioContent = {
         title: 'FutureScape',
         tech: 'Next.js, python, docker, supabase',
         desc: 'Web Application for online competitions',
-        description: 'Built a web application for a college tech fest with seven rounds, including blind coding and debugging challenges. Used Next.js, Tailwind CSS, and Supabase to implement features like a real-time leaderboard, user authentication, and an admin panel to manage participant progression.',
+        description: 'A comprehensive competition platform designed for a college tech fest featuring seven challenging rounds, including blind coding and debugging challenges. The application combines Next.js and Tailwind CSS for a modern frontend experience with Supabase powering the backend infrastructure. Key features include a real-time leaderboard that updates participant rankings instantly, robust user authentication system, and a comprehensive admin panel for managing participant progression through different rounds. The platform handles multiple concurrent users while maintaining performance and data integrity.',
         deployLink: '',
         sourceCodeLink: '',
-        previewImage: '/react-portfolio/images/projects/futurescape-1.png',
+        previewImage: '/images/projects/futurescape-1.png',
         images: [
-          '/react-portfolio/images/projects/futurescape-1.png',
-          '/react-portfolio/images/projects/futurescape-2.png',
-          '/react-portfolio/images/projects/futurescape-3.png',
-          '/react-portfolio/images/projects/futurescape-4.png',
-          '/react-portfolio/images/projects/futurescape-5.png',
-          '/react-portfolio/images/projects/futurescape-6.png',
+          '/images/projects/futurescape-1.png',
+          '/images/projects/futurescape-2.png',
+          '/images/projects/futurescape-3.png',
+          '/images/projects/futurescape-4.png',
+          '/images/projects/futurescape-5.png',
+          '/images/projects/futurescape-6.png',
         ]
     },
     {
@@ -78,16 +80,16 @@ const portfolioContent = {
         title: 'PolyComm',
         tech: 'Next.js, Stream API, React',
         desc: 'Multilingual video conferencing platform with transcription',
-        description: 'Developed a video conferencing platform using Next.js and the Stream API, enabling users to create and join meetings. The application supports real-time transcription in three languages, with automatic translation to English for seamless communication. Additionally, PolyComm offers post-meeting documentation tools with customizable templates, allowing users to generate, edit, and export detailed meeting summaries efficiently.',
+        description: 'An advanced video conferencing platform that breaks down language barriers in virtual meetings. The application leverages the Stream API to provide high-quality video communication while offering real-time transcription capabilities in three different languages. The standout feature is automatic translation to English, ensuring seamless communication between participants speaking different languages. Additionally, the platform includes sophisticated post-meeting documentation tools with customizable templates, enabling users to generate, edit, and export comprehensive meeting summaries efficiently. This solution addresses the growing need for multilingual collaboration in global remote work environments.',
         deployLink: '',
-        previewImage: '/react-portfolio/images/projects/polycomm-1.png',
+        previewImage: '/images/projects/polycomm-1.png',
         images: [
-          '/react-portfolio/images/projects/polycomm-1.png',
-          '/react-portfolio/images/projects/polycomm-2.png',
-          '/react-portfolio/images/projects/polycomm-3.png',
-          '/react-portfolio/images/projects/polycomm-4.png',
-          '/react-portfolio/images/projects/polycomm-5.png',
-          '/react-portfolio/images/projects/polycomm-6.png',
+          '/images/projects/polycomm-1.png',
+          '/images/projects/polycomm-2.png',
+          '/images/projects/polycomm-3.png',
+          '/images/projects/polycomm-4.png',
+          '/images/projects/polycomm-5.png',
+          '/images/projects/polycomm-6.png',
         ]
     },
     {
@@ -95,14 +97,14 @@ const portfolioContent = {
         title: 'File Vault',
         tech: 'Node.js, Express.js, TypeScript, Supabase, AES-256-GCM',
         desc: 'Secure file storage and retrieval system with end-to-end encryption',
-        description: 'A secure file storage and retrieval system that allows authorized users to upload, download, and manage their files. Implemented with Node.js, Express.js, TypeScript, and Supabase, using Object-Oriented Programming principles and AES-256-GCM encryption. Features include secure file upload and storage, end-to-end file encryption and decryption, user authentication and authorization, file metadata management, and file renaming and deletion capabilities.',
+        description: 'A robust file storage and retrieval system that prioritizes security and user privacy through end-to-end encryption. The application employs AES-256-GCM encryption standards to ensure files remain secure both in transit and at rest. Built with TypeScript and following Object-Oriented Programming principles, the system provides a clean architecture for maintainability and scalability. Core functionalities include secure file upload and storage, comprehensive file encryption and decryption processes, user authentication and authorization mechanisms, detailed file metadata management, and intuitive file renaming and deletion capabilities. The platform serves as a trusted solution for users requiring secure cloud storage with enterprise-level encryption.',
         deployLink: '',
         sourceCodeLink: 'https://github.com/AthulSabu2002/fileVault',
-        previewImage: '/react-portfolio/images/projects/filevault-1.png',
+        previewImage: '/images/projects/filevault-1.png',
         images: [
-          '/react-portfolio/images/projects/filevault-1.png',
-          '/react-portfolio/images/projects/filevault-2.png',
-          '/react-portfolio/images/projects/filevault-3.png',
+          '/images/projects/filevault-1.png',
+          '/images/projects/filevault-2.png',
+          '/images/projects/filevault-3.png',
         ]
     }
   ],
