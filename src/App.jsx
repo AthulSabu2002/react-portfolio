@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Portfolio from './pages/Portfolio';
 import Preloader from './components/Preloader/Preloader';
+import SEO from './components/SEO/SEO';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,9 +23,12 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      {loading ? <Preloader progress={progress} /> : <Portfolio />}
-    </div>
+    <>
+      <SEO />
+      <div className="app">
+        {loading ? <Preloader progress={progress} /> : <Portfolio />}
+      </div>
+    </>
   );
 }
 

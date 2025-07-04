@@ -106,6 +106,24 @@ const portfolioContent = {
           '/images/projects/filevault-2.png',
           '/images/projects/filevault-3.png',
         ]
+    },
+    {
+      name: 'Authentication System',
+      title: 'Authentication System',
+      tech: 'MongoDB, Express.js, React, Node.js, Tailwind CSS',
+      desc: 'Full-stack authentication system with email/password and OAuth support',
+      description: 'A comprehensive authentication system built with the MERN stack featuring both traditional email/password authentication and OAuth integration. The system includes secure password hashing with bcrypt, MongoDB for user data storage, protected routes, and authorized API endpoints. Additional features include password reset functionality, email verification, session management, and Google OAuth 2.0 integration. The frontend utilizes modern React with Tailwind CSS for a clean and responsive user interface with robust form validation and error handling.',
+      deployLink: '',
+      sourceCodeLink: 'https://github.com/AthulSabu2002/authentication',
+      previewImage: '/images/projects/auth-preview.png',
+      images: [
+        '/images/projects/auth-1.png',
+        '/images/projects/auth-2.png',
+        '/images/projects/auth-3.png',
+        '/images/projects/auth-4.png',
+        '/images/projects/auth-5.png',
+        '/images/projects/auth-6.png',
+      ]
     }
   ],
 
