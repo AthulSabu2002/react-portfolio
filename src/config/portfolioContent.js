@@ -153,17 +153,56 @@ const portfolioContent = {
     {
       title: "Web Developer",
       company: "Freelance",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - Aug 2025",
       location: "Remote",
       description: [
-        "Built backend for Admin Portal using Next.js App Router and Supabase with TypeScript",
-        "Implemented batch processing to reduce redundant API calls and improve data throughput",
-        "Created Supabase RPC functions for complex database operations",
-        "Built server-side pagination with SQL queries to minimize client payload",
-        "Developed reusable UI components for consistent interface",
-        "Used TanStack Query caching to reduce load times"
+        "Developed the backend for an administrative portal using Next.js and Supabase",
+        "Implemented batch processing to optimize data throughput and reduce network requests",
+        "Wrote custom database functions to handle complex data operations securely",
+        "Configured server-side pagination to reduce the amount of data transferred to the client",
+        "Built reusable interface components to maintain visual consistency",
+        "Configured data caching to decrease application load times"
       ],
       technologies: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "PostgreSQL"]
+    },
+    {
+      title: "Frontend Developer Intern",
+      company: "Oronium",
+      period: "Aug 2025 - Aug 2025",
+      location: "Remote",
+      description: [
+        "Maintained and improved the frontend architecture of the administrative portal",
+        "Updated interface components to improve responsiveness and usability",
+        "Connected frontend components to external data sources to display real-time information"
+      ],
+      technologies: ["Next.js", "JavaScript"]
+    },
+    {
+      title: "Frontend Developer",
+      company: "Oronium",
+      period: "Sep 2025 - Jan 2026",
+      location: "Remote",
+      description: [
+        "Translated design files into functional frontend interfaces",
+        "Configured site indexing rules to secure private portals and optimize public pages for search engines",
+        "Mentored interns and conducted code reviews to maintain code quality",
+        "Worked with backend teams to integrate data services and improve application data flow",
+        "Implemented server-side rendering to improve page performance"
+      ],
+      technologies: ["Next.js", "JavaScript", "React Query Builder"]
+    },
+    {
+      title: "Full-Stack Developer",
+      company: "Oronium",
+      period: "Jan 2026 - Present",
+      location: "Remote",
+      description: [
+        "Maintained and expanded features across both frontend and backend systems",
+        "Built bulk export features to handle the reliable downloading of large datasets",
+        "Directed junior developers through regular code reviews and technical guidance",
+        "Developed new server endpoints to support ongoing feature additions"
+      ],
+      technologies: ["Next.js", "JavaScript", "Node.js", "MongoDB", "PostgreSQL"]
     }
   ],
 
