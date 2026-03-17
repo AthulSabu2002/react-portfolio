@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Portfolio from './pages/Portfolio';
-import Preloader from './components/Preloader/Preloader';
+import Preloader from './components/preloader/Preloader';
 import SEO from './components/SEO/SEO';
 
 function App() {
