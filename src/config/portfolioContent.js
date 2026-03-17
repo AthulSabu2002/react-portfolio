@@ -134,7 +134,7 @@ const portfolioContent = {
     email: 'mailto:athulsabu75@gmail.com' 
   },
 
-  terminal: {
+    terminal: {
     welcomeMessage: 'Welcome to my portfolio. Type "help" to see available commands.',
     prompt: '~',
     availableCommands: `
@@ -142,10 +142,44 @@ const portfolioContent = {
       • projects - View my projects
       • about - Learn about me
       • skills - See my technical skills
+      • experience - View work experience
+      • education - View education background
       • contact - Get my contact info
       • clear - Clear the terminal
     `
-  }
+  },
+
+  experiences:[
+    {
+      title: "Web Developer",
+      company: "Freelance",
+      period: "Jan 2025 - Present",
+      location: "Remote",
+      description: [
+        "Built backend for Admin Portal using Next.js App Router and Supabase with TypeScript",
+        "Implemented batch processing to reduce redundant API calls and improve data throughput",
+        "Created Supabase RPC functions for complex database operations",
+        "Built server-side pagination with SQL queries to minimize client payload",
+        "Developed reusable UI components for consistent interface",
+        "Used TanStack Query caching to reduce load times"
+      ],
+      technologies: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "PostgreSQL"]
+    }
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      institution: "St.Joseph's College of Engineering and Technology",
+      period: "2021 - 2025",
+      location: "Palai, Kottayam, Kerala",
+      cgpa: "9.28/10.00",
+      description: [
+        "Graduated with Minor degree in Robotics and Automation"
+      ],
+      courses: ["C", "java", "Data Structures", "Web Development", "Operating Systems", "Database Management System"]
+    }
+  ]
 };
 
 export { portfolioContent };

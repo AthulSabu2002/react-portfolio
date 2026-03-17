@@ -59,6 +59,20 @@ const VerticalNavbar = ({ isMobile }) => {
             isActive={activeSection === 'skills'}
             isMobile={true}
           />
+          {/* <NavItem 
+            icon={<FaGraduationCap />} 
+            label="Education" 
+            onClick={() => scrollToSection('education')} 
+            isActive={activeSection === 'education'}
+            isMobile={true}
+          /> */}
+          {/* <NavItem 
+            icon={<FaBriefcase />} 
+            label="Experience" 
+            onClick={() => scrollToSection('experience')} 
+            isActive={activeSection === 'experience'}
+            isMobile={true}
+          /> */}
           <NavItem 
             icon={<FaProjectDiagram />} 
             label="Projects" 
@@ -94,6 +108,18 @@ const VerticalNavbar = ({ isMobile }) => {
           onClick={() => scrollToSection('skills')} 
           isActive={activeSection === 'skills'}
         />
+        {/* <NavItem 
+          icon={<FaGraduationCap />} 
+          label="Education" 
+          onClick={() => scrollToSection('education')} 
+          isActive={activeSection === 'education'}
+        /> */}
+        {/* <NavItem 
+          icon={<FaBriefcase />} 
+          label="Experience" 
+          onClick={() => scrollToSection('experience')} 
+          isActive={activeSection === 'experience'}
+        /> */}
         <NavItem 
           icon={<FaProjectDiagram />} 
           label="Projects" 

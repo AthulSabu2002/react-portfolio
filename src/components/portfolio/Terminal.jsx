@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
-import { Terminal, ArrowRight, Code, User, Mail, Briefcase } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { Terminal, ArrowRight, Code, User, Mail, Briefcase, GraduationCap, Calendar } from 'lucide-react';
 import { portfolioContent } from '../../config/portfolioContent';
 import styles from '../../styles/Terminal.module.css';
 
@@ -10,6 +10,15 @@ const TerminalPortfolio = () => {
     { type: 'system', content: portfolioContent.terminal.welcomeMessage }
   ]);
   const [currentPath, setCurrentPath] = useState(portfolioContent.terminal.prompt);
+  const terminalRef = useRef(null);
+  const lastItemRef = useRef(null); // Reference to track the last item
+
+  // Scroll to the last added item instead of all the way to the bottom
+  useEffect(() => {
+    if (lastItemRef.current && history.length > 0) {
+      lastItemRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [history]);
 
   const commands = {
     help: {
@@ -45,6 +54,20 @@ const TerminalPortfolio = () => {
       action: () => ({
         type: 'system',
         content: `You can find me at:\nGitHub: ${portfolioContent.social.github}\nLinkedIn: ${portfolioContent.social.linkedin}`
+      })
+    },
+    experience: {
+      description: 'View work experience',
+      action: () => ({
+        type: 'experience',
+        content: portfolioContent?.experiences || []
+      })
+    },
+    education: {
+      description: 'View education background',
+      action: () => ({
+        type: 'education',
+        content: portfolioContent?.education || []
       })
     }
   };
@@ -100,6 +123,63 @@ const TerminalPortfolio = () => {
           </div>
         );
       
+      case 'experience':
+        return (
+          <div className="mt-4 space-y-6">
+            {item.content.map((job, idx) => (
+              <div key={idx} className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                <div className="flex items-center gap-2 mb-2">
+                  <Briefcase className="w-4 h-4 text-emerald-400" />
+                  <h3 className="text-lg font-mono text-emerald-400">{job.title} - {job.company}</h3>
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar className="w-4 h-4 text-slate-400" />
+                  <p className="text-sm text-slate-400 font-mono">{job.period} | {job.location} | Part Time</p>
+                </div>
+                <div className="pl-6 mb-2">
+                  <p className="text-slate-200 mb-2">Technologies: {job.technologies.join(', ')}</p>
+                  <ul className="list-disc pl-5 text-slate-200">
+                    {job.description.map((item, i) => (
+                      <li key={i} className="mb-1">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      
+      case 'education':
+        return (
+          <div className="mt-4 space-y-6">
+            {item.content.map((edu, idx) => (
+              <div key={idx} className="bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+                <div className="flex items-center gap-2 mb-2">
+                  <GraduationCap className="w-4 h-4 text-emerald-400" />
+                  <h3 className="text-lg font-mono text-emerald-400">{edu.degree}</h3>
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar className="w-4 h-4 text-slate-400" />
+                  <p className="text-sm text-slate-400 font-mono">{edu.period} | {edu.location}</p>
+                </div>
+                <div className="pl-6 mb-2">
+                  <p className="text-slate-200 mb-1">Institution: {edu.institution}</p>
+                  <p className="text-slate-200 mb-2">CGPA: {edu.cgpa}</p>
+                  {edu.description && (
+                    <ul className="list-disc pl-5 text-slate-200 mb-2">
+                      {edu.description.map((item, i) => (
+                        <li key={i} className="mb-1">{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <p className="text-slate-200 mb-1">Relevant Courses:</p>
+                  <p className="text-slate-400 text-sm">{edu.courses.join(', ')}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+
       case 'system':
         return (
           <div className="mt-4 bg-slate-800/50 p-4 rounded-lg border border-slate-700">
@@ -140,9 +220,15 @@ const TerminalPortfolio = () => {
         <span className="text-xs text-slate-400">portfolio.sh</span>
       </div>
       
-      <div className={`flex-1 overflow-y-auto space-y-1 mb-4 ${styles.terminalScroll}`}>
+      <div 
+        ref={terminalRef}
+        className={`flex-1 overflow-y-auto space-y-1 mb-4 ${styles.terminalScroll}`}
+      >
         {history.map((item, idx) => (
-          <div key={idx}>
+          <div 
+            key={idx}
+            ref={idx === history.length - 1 ? lastItemRef : null} 
+          >
             {renderOutput(item)}
           </div>
         ))}

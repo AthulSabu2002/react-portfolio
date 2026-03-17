@@ -8,6 +8,8 @@ import ProjectsSection from '../components/portfolio/ProjectsSection';
 import SocialSection from '../components/portfolio/SocialSection';
 import TerminalOverlay from '../components/portfolio/TerminalOverlay';
 import VerticalNavbar from '../components/portfolio/VerticalNavbar';
+import ExperienceSection from '../components/portfolio/ExperienceSection';
+import EducationSection from '../components/portfolio/EducationSection';
 
 const Portfolio = () => {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -32,10 +34,8 @@ const Portfolio = () => {
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white transition-all duration-300 relative overflow-hidden ${
       isTerminalOpen && !isMobile ? 'lg:pr-[520px]' : ''
     } ${isMobile ? 'pb-20' : ''}`}>
-      {/* Background Effects */}
       <BackgroundEffects />
       
-      {/* Vertical Navigation */}
       <VerticalNavbar isMobile={isMobile} />
       
       <Helmet>
@@ -43,17 +43,23 @@ const Portfolio = () => {
         <meta name="description" content={`Portfolio of ${portfolioContent?.hero?.name}`} />
       </Helmet>
 
-      {/* Main Content - Centered */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 relative">
         <div className="space-y-12 sm:space-y-16">
           <HeroSection hero={portfolioContent.hero} id="hero" />
           <SkillsSection id="skills" />
+          <ExperienceSection 
+            experiences={portfolioContent.experiences} 
+            id="experience" 
+          />
+          <EducationSection
+            education={portfolioContent.education}
+            id="education"
+          />
           <ProjectsSection projects={portfolioContent.projects} githubLink={portfolioContent.social.github} id="projects" />
           <SocialSection social={portfolioContent.social} id="social" />
         </div>
       </div>
 
-      {/* Terminal Component */}
       <TerminalOverlay 
         isOpen={isTerminalOpen}
         onToggle={() => setIsTerminalOpen(!isTerminalOpen)}
