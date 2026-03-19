@@ -75,10 +75,10 @@ const EducationSection = ({ education, id }) => {
                 )}
               </div>
               
-              {edu.gpa && (
+              {edu.cgpa && (
                 <div className="text-slate-300 mb-2">
-                  <span className="text-emerald-400">GPA: </span>
-                  <span>{edu.gpa}</span>
+                  <span className="text-emerald-400">CGPA: </span>
+                  <span>{edu.cgpa}</span>
                 </div>
               )}
               
