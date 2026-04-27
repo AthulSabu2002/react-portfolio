@@ -151,31 +151,17 @@ const portfolioContent = {
 
   experiences:[
     {
-      title: "Web Developer",
-      company: "Freelance",
-      period: "Jan 2025 - Aug 2025",
-      location: "Remote",
-      description: [
-        "Developed the backend for an administrative portal using Next.js and Supabase",
-        "Implemented batch processing to optimize data throughput and reduce network requests",
-        "Wrote custom database functions to handle complex data operations securely",
-        "Configured server-side pagination to reduce the amount of data transferred to the client",
-        "Built reusable interface components to maintain visual consistency",
-        "Configured data caching to decrease application load times"
-      ],
-      technologies: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "PostgreSQL"]
-    },
-    {
-      title: "Frontend Developer Intern",
+      title: "Full-Stack Developer",
       company: "Oronium",
-      period: "Aug 2025 - Aug 2025",
+      period: "Jan 2026 - Present",
       location: "Remote",
       description: [
-        "Maintained and improved the frontend architecture of the administrative portal",
-        "Updated interface components to improve responsiveness and usability",
-        "Connected frontend components to external data sources to display real-time information"
+        "Maintained and expanded features across both frontend and backend systems",
+        "Built bulk export features to handle the reliable downloading of large datasets",
+        "Directed junior developers through regular code reviews and technical guidance",
+        "Developed new server endpoints to support ongoing feature additions"
       ],
-      technologies: ["Next.js", "JavaScript"]
+      technologies: ["Next.js", "JavaScript", "Node.js", "MongoDB", "PostgreSQL"]
     },
     {
       title: "Frontend Developer",
@@ -192,18 +178,32 @@ const portfolioContent = {
       technologies: ["Next.js", "JavaScript", "React Query Builder"]
     },
     {
-      title: "Full-Stack Developer",
+      title: "Frontend Developer Intern",
       company: "Oronium",
-      period: "Jan 2026 - Present",
+      period: "Aug 2025 - Aug 2025",
       location: "Remote",
       description: [
-        "Maintained and expanded features across both frontend and backend systems",
-        "Built bulk export features to handle the reliable downloading of large datasets",
-        "Directed junior developers through regular code reviews and technical guidance",
-        "Developed new server endpoints to support ongoing feature additions"
+        "Maintained and improved the frontend architecture of the administrative portal",
+        "Updated interface components to improve responsiveness and usability",
+        "Connected frontend components to external data sources to display real-time information"
       ],
-      technologies: ["Next.js", "JavaScript", "Node.js", "MongoDB", "PostgreSQL"]
-    }
+      technologies: ["Next.js", "JavaScript"]
+    },
+    {
+      title: "Web Developer",
+      company: "Freelance",
+      period: "Jan 2025 - Aug 2025",
+      location: "Remote",
+      description: [
+        "Developed the backend for an administrative portal using Next.js and Supabase",
+        "Implemented batch processing to optimize data throughput and reduce network requests",
+        "Wrote custom database functions to handle complex data operations securely",
+        "Configured server-side pagination to reduce the amount of data transferred to the client",
+        "Built reusable interface components to maintain visual consistency",
+        "Configured data caching to decrease application load times"
+      ],
+      technologies: ["Next.js", "TypeScript", "Supabase", "TanStack Query", "PostgreSQL"]
+    },
   ],
 
   education: [
